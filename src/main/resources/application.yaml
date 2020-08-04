@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    banner-mode: console
+
+  datasource:
+#    url: jdbc:h2:mem:my-awesome-db
+#    username: te
+#    password: te
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: te
+#    initialization-mode: always
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2
